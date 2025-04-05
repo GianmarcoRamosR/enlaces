@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accesos Directos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .toggle-btn {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .toggle-btn:hover {
+      background-color: #005fa3;
+    }
+    .links {
+      display: none;
+      width: 100%;
+      text-align: left;
+    }
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: #0077cc;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    .links a:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enlaces de Trabajo</h1>
+  <div class="container">
+    <div class="card">
+      <img src="https://img.icons8.com/fluency/96/company.png" alt="Icono Empresa Tismart">
+      <h2>TISMART</h2>
+      <button class="toggle-btn" onclick="toggleLinks(this)">Ver enlaces</button>
+      <div class="links">
+        <a href="https://www.tismart.com" target="_blank">Sitio Web TISMART</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.icons8.com/fluency/96/workstation.png" alt="Icono Empresa ITUSA">
+      <h2>ITUSA Services</h2>
+      <button class="toggle-btn" onclick="toggleLinks(this)">Ver enlaces</button>
+      <div class="links">
+        <a href="https://app.powerbi.com/groups/me/reports/65425174-4bc2-4d2d-8596-9895c3d1a9b9/10dfaed227b2e9abb01e?ctid=89ff9f92-42b4-4284-81e6-68802203005c&experience=power-bi" target="_blank">Power BI: Ppto vs Egreso</a>
+        <a href="https://app.powerbi.com/groups/me/reports/51d04144-1301-4113-9bf9-04bea5c77d39/c159c75b0a042422b064?ctid=89ff9f92-42b4-4284-81e6-68802203005c&experience=power-bi" target="_blank">Power BI: Ingresos vs Facturación</a>
+        <a href="https://analytics.google.com/analytics/web/?hl=es#/p429669091/reports/reportinghub?params=_u..nav%3Dmaui%26_u.comparisonOption%3Ddisabled%26_u.date00%3D20250301%26_u.date01%3D20250331&collectionId=7853906891" target="_blank">Google Analytics ITUSA</a>
+        <a href="https://sso.godaddy.com/?realm=idp&app=cart&path=%2Fcheckoutapi%2Fv1%2Fredirects%2Flogin" target="_blank">GoDaddy <br> 10845054 | 15Dediciembre@2024</a>
+      </div>
+      
+    </div>
+
+
+   
+
+    <div class="card">
+      <img src="https://img.icons8.com/fluency/96/university.png" alt="Icono Universidad">
+      <h2>Estudios</h2>
+      <button class="toggle-btn" onclick="toggleLinks(this)">Ver enlaces</button>
+      <div class="links">
+        <a href="https://hotmart.com/es/club/ia-profit/products/4554455" target="_blank">Hotmart</a>
+        <a href="https://www.coursera.org/programs/pucp-docentes-fc-2umjj?utm_campaign=enterpriseComms.-MpaSxdoTBq675lY87TswA.enterprise.autoenrollment.email.v1~212b51b5e16114742020f7ec2dc946ce&utm_medium=email&utm_source=other" target="_blank">Coursera UPC</a>
+        <a href="https://www.coursera.org/my-learning?myLearningTab=IN_PROGRESS" target="_blank">Coursera GMAIL</a>
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="card">
+      <img src="https://img.icons8.com/fluency/96/handshake.png" alt="Icono Consultoría">
+      <h2>Consultoría</h2>
+      <button class="toggle-btn" onclick="toggleLinks(this)">Ver enlaces</button>
+      <div class="links">
+        <a href="https://miportal.conseller.org/" target="_blank">Conseller Marketing <br>Correo tismart</a>
+        <a href="https://www.accenture.com" target="_blank">Accenture</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleLinks(button) {
+      const links = button.nextElementSibling;
+      const isVisible = links.style.display === 'block';
+      links.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Ver enlaces' : 'Ocultar enlaces';
+    }
+  </script>
+</body>
+</html>
